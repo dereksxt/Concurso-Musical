@@ -1,0 +1,160 @@
+/* Variables de colores */
+:root {
+    font-family: Inter, 'Segoe UI', Arial, sans-serif;
+
+    --color-primary: #42b883;
+    --color-primary-dark: #339c6e;
+    --color-secondary: #35495e;
+
+    --color-background: #f4f8f5;
+    --color-surface: #ffffff;
+
+    --color-text: #24332d;
+    --color-text-light: #718078;
+
+    --color-border: #e3ebe6;
+
+    --shadow-card: 0 8px 25px rgba(35, 73, 54, 0.07);
+}
+
+/* Reset general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    font-family: Inter, 'Segoe UI', Arial, sans-serif;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Enlaces */
+a {
+    color: inherit;
+}
+
+/* Botones */
+button {
+    font-family: inherit;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+}
+
+/* ========================================
+   APLICACIÓN
+======================================== */
+
+#app {
+    min-height: 100vh;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+/* ========================================
+   CABECERA
+======================================== */
+
+.app-header {
+    position: relative;
+    overflow: hidden;
+
+    padding: 3rem 1rem;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #17352b 0%,
+        #245d43 55%,
+        #35495e 100%
+    );
+
+    color: white;
+}
+
+.app-header::after {
+    content: '';
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -80px;
+    top: -120px;
+
+    border-radius: 50%;
+    background: rgba(66, 184, 131, 0.13);
+}
+
+.app-header h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 0.6rem;
+
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.app-header p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: #c6e8d7;
+    font-size: 1.05rem;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+.app-main {
+    width: min(1100px, 100%);
+    margin: 2.5rem auto;
+    padding: 0 1.25rem 3rem;
+}
+
+/* ========================================
+   TARJETAS GENERALES
+======================================== */
+
+.tarjeta,
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+    .app-header {
+        padding: 2.2rem 1rem;
+    }
+
+    .app-main {
+        margin-top: 1.5rem;
+        padding: 0 1rem 2rem;
+    }
+}
